@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ui.events.EventDetailDialogFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/eventDetailDescriptionTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/eventDetailDescriptionTitle"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/eventDetailDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/defaultEventDetailDetails"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="8dp"
+            android:background="@color/grey" />
+
+        <TextView
+            android:id="@+id/eventDetailTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/eventDetailsTimeDefault"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="8dp"
+            android:background="@color/grey" />
+
+        <TextView
+            android:id="@+id/eventDetailSpeakerGridSpeakerName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:drawableEnd="@drawable/ic_navigate_next_black_24dp"
+            android:singleLine="true"
+            android:text="@string/eventDetailSpeakerGridSpeakerNameDefault"
+            android:textSize="18sp" />
+
+        <View
+            android:id="@+id/hideableLineForSpeakers"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="8dp"
+            android:background="@color/grey" />
+
+        <TextView
+            android:id="@+id/eventDetailLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="0.9"
+            android:layout_gravity="start"
+            android:layout_marginStart="8dp"
+            android:text="@string/eventDetailLocationDefault"
+            android:textAlignment="textStart"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="8dp"
+            android:background="@color/grey" />
+
+        <fragment
+            android:id="@+id/eventDetailsMap"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            app:liteMode="true"
+            tools:context="uk.ac.aber.dcs.cs31620.conferenceapp.ui.map.GoogleMapContext" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
